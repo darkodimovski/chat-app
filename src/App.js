@@ -3,8 +3,6 @@ import './App.css';
 import Messages from './components/Messages'; 
 import Input from "./components/Input";
 
-
-
 /* -- Funkcija koja generira nasumično ime usera -- */
 function randomUser() {
   /* Niz pridjeva */
