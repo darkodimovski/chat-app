@@ -5,7 +5,7 @@ import Input from "./components/Input";
 
 
 
-/* Funkcija koja generira nasumično ime usera */
+/* -- Funkcija koja generira nasumično ime usera -- */
 function randomUser() {
   /* Niz pridjeva */
   const pridjevi = [
