@@ -3,7 +3,9 @@ import './App.css';
 import Messages from './components/Messages'; 
 import Input from "./components/Input";
 
-/* -- Funkcija koja generira nasumično ime usera -- */
+
+
+/* Funkcija koja generira nasumično ime usera */
 function randomUser() {
   /* Niz pridjeva */
   const pridjevi = [
@@ -37,6 +39,7 @@ export default class App extends Component {
     this.drone = new window.Scaledrone('4wplfh0PrAVjtw3n', {
       data: this.state.member
     });
+
     this.drone.on('open', error => {
       if (error) {
         return console.error(error);
@@ -45,6 +48,7 @@ export default class App extends Component {
       member.id = this.drone.clientId;
       this.setState({member});
     });
+
     const room = this.drone.subscribe("observable-room");
     room.on('data', (data, member) => {
       const messages = this.state.messages;
@@ -55,10 +59,9 @@ export default class App extends Component {
   }
 
 
-
   render() {
     return (
-      <div className="flex flex-col justify-between h-full h-screen">
+      <div className="flex flex-col justify-between h-screen">
         <div className="bg-gradient-to-r from-green-400 to-blue-400 p-10">
           <h1 className="text-center text-2xl font-bold text-white">Chat App - Seminar</h1>
         </div>
